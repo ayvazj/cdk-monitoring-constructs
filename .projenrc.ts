@@ -108,7 +108,7 @@ project.eslint?.addRules({
 // typing files are sufficient.
 project.addPackageIgnore("*.ts");
 project.addPackageIgnore("!*.d.ts");
-project.addTask("prepare", { exec: "npx projen build" });
+
 project.release?.addJobs({
   notify_slack: {
     name: "Send Slack notification",
