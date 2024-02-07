@@ -38155,7 +38155,7 @@ const rdsInstanceMonitoringOptions: RdsInstanceMonitoringOptions = { ... }
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.addToSummaryDashboard">addToSummaryDashboard</a></code> | <code>boolean</code> | Flag indicating if the widgets should be added to summary dashboard. |
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.useCreatedAlarms">useCreatedAlarms</a></code> | <code><a href="#cdk-monitoring-constructs.IAlarmConsumer">IAlarmConsumer</a></code> | Calls provided function to process all alarms created. |
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.addCpuUsageAlarm">addCpuUsageAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.UsageThreshold">UsageThreshold</a>}</code> | *No description.* |
-| <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.addDiskSpaceUsageAlarm">addDiskSpaceUsageAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.UsageThreshold">UsageThreshold</a>}</code> | *No description.* |
+| <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.addFreeStorageSpaceAlarm">addFreeStorageSpaceAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.MinUsageCountThreshold">MinUsageCountThreshold</a>}</code> | *No description.* |
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.addMaxConnectionCountAlarm">addMaxConnectionCountAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.HighConnectionCountThreshold">HighConnectionCountThreshold</a>}</code> | *No description.* |
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.addMinConnectionCountAlarm">addMinConnectionCountAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.LowConnectionCountThreshold">LowConnectionCountThreshold</a>}</code> | *No description.* |
 
@@ -38269,13 +38269,13 @@ public readonly addCpuUsageAlarm: {[ key: string ]: UsageThreshold};
 
 ---
 
-##### `addDiskSpaceUsageAlarm`<sup>Optional</sup> <a name="addDiskSpaceUsageAlarm" id="cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.addDiskSpaceUsageAlarm"></a>
+##### `addFreeStorageSpaceAlarm`<sup>Optional</sup> <a name="addFreeStorageSpaceAlarm" id="cdk-monitoring-constructs.RdsInstanceMonitoringOptions.property.addFreeStorageSpaceAlarm"></a>
 
 ```typescript
-public readonly addDiskSpaceUsageAlarm: {[ key: string ]: UsageThreshold};
+public readonly addFreeStorageSpaceAlarm: {[ key: string ]: MinUsageCountThreshold};
 ```
 
-- *Type:* {[ key: string ]: <a href="#cdk-monitoring-constructs.UsageThreshold">UsageThreshold</a>}
+- *Type:* {[ key: string ]: <a href="#cdk-monitoring-constructs.MinUsageCountThreshold">MinUsageCountThreshold</a>}
 
 ---
 
@@ -38322,7 +38322,7 @@ const rdsInstanceMonitoringProps: RdsInstanceMonitoringProps = { ... }
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.addToSummaryDashboard">addToSummaryDashboard</a></code> | <code>boolean</code> | Flag indicating if the widgets should be added to summary dashboard. |
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.useCreatedAlarms">useCreatedAlarms</a></code> | <code><a href="#cdk-monitoring-constructs.IAlarmConsumer">IAlarmConsumer</a></code> | Calls provided function to process all alarms created. |
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.addCpuUsageAlarm">addCpuUsageAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.UsageThreshold">UsageThreshold</a>}</code> | *No description.* |
-| <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.addDiskSpaceUsageAlarm">addDiskSpaceUsageAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.UsageThreshold">UsageThreshold</a>}</code> | *No description.* |
+| <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.addFreeStorageSpaceAlarm">addFreeStorageSpaceAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.MinUsageCountThreshold">MinUsageCountThreshold</a>}</code> | *No description.* |
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.addMaxConnectionCountAlarm">addMaxConnectionCountAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.HighConnectionCountThreshold">HighConnectionCountThreshold</a>}</code> | *No description.* |
 | <code><a href="#cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.addMinConnectionCountAlarm">addMinConnectionCountAlarm</a></code> | <code>{[ key: string ]: <a href="#cdk-monitoring-constructs.LowConnectionCountThreshold">LowConnectionCountThreshold</a>}</code> | *No description.* |
 
@@ -38448,13 +38448,13 @@ public readonly addCpuUsageAlarm: {[ key: string ]: UsageThreshold};
 
 ---
 
-##### `addDiskSpaceUsageAlarm`<sup>Optional</sup> <a name="addDiskSpaceUsageAlarm" id="cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.addDiskSpaceUsageAlarm"></a>
+##### `addFreeStorageSpaceAlarm`<sup>Optional</sup> <a name="addFreeStorageSpaceAlarm" id="cdk-monitoring-constructs.RdsInstanceMonitoringProps.property.addFreeStorageSpaceAlarm"></a>
 
 ```typescript
-public readonly addDiskSpaceUsageAlarm: {[ key: string ]: UsageThreshold};
+public readonly addFreeStorageSpaceAlarm: {[ key: string ]: MinUsageCountThreshold};
 ```
 
-- *Type:* {[ key: string ]: <a href="#cdk-monitoring-constructs.UsageThreshold">UsageThreshold</a>}
+- *Type:* {[ key: string ]: <a href="#cdk-monitoring-constructs.MinUsageCountThreshold">MinUsageCountThreshold</a>}
 
 ---
 

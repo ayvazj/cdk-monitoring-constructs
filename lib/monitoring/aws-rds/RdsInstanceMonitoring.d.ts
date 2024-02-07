@@ -1,9 +1,9 @@
 import { GraphWidget, HorizontalAnnotation, IWidget } from "aws-cdk-lib/aws-cloudwatch";
 import { RdsInstanceMetricFactoryProps } from "./RdsInstanceMetricFactory";
-import { BaseMonitoringProps, ConnectionAlarmFactory, HighConnectionCountThreshold, LowConnectionCountThreshold, MetricWithAlarmSupport, Monitoring, MonitoringScope, UsageAlarmFactory, UsageThreshold } from "../../common";
+import { BaseMonitoringProps, ConnectionAlarmFactory, HighConnectionCountThreshold, LowConnectionCountThreshold, MetricWithAlarmSupport, MinUsageCountThreshold, Monitoring, MonitoringScope, UsageAlarmFactory, UsageThreshold } from "../../common";
 import { MonitoringHeaderWidget } from "../../dashboard";
 export interface RdsInstanceMonitoringOptions extends BaseMonitoringProps {
-    readonly addDiskSpaceUsageAlarm?: Record<string, UsageThreshold>;
+    readonly addFreeStorageSpaceAlarm?: Record<string, MinUsageCountThreshold>;
     readonly addCpuUsageAlarm?: Record<string, UsageThreshold>;
     readonly addMinConnectionCountAlarm?: Record<string, LowConnectionCountThreshold>;
     readonly addMaxConnectionCountAlarm?: Record<string, HighConnectionCountThreshold>;

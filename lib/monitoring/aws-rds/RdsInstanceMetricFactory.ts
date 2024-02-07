@@ -59,8 +59,8 @@ export class RdsInstanceMetricFactory {
   metricAverageFreeStorageSpace() {
     return this.metric(
       "FreeStorageSpace",
-      MetricStatistic.AVERAGE,
-      "FreeStorageSpace: Average"
+      MetricStatistic.MAX,
+      "FreeStorageSpace: MAX"
     );
   }
 

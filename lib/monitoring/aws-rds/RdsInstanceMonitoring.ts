@@ -19,6 +19,7 @@ import {
   LatencyType,
   LowConnectionCountThreshold,
   MetricWithAlarmSupport,
+  MinUsageCountThreshold,
   Monitoring,
   MonitoringScope,
   PercentageAxisFromZeroToHundred,
@@ -34,7 +35,7 @@ import {
 } from "../../dashboard";
 
 export interface RdsInstanceMonitoringOptions extends BaseMonitoringProps {
-  readonly addDiskSpaceUsageAlarm?: Record<string, UsageThreshold>;
+  readonly addFreeStorageSpaceAlarm?: Record<string, MinUsageCountThreshold>;
   readonly addCpuUsageAlarm?: Record<string, UsageThreshold>;
   readonly addMinConnectionCountAlarm?: Record<
     string,
@@ -110,9 +111,9 @@ export class RdsInstanceMonitoring extends Monitoring {
     this.usageAnnotations = [];
     this.connectionAnnotations = [];
 
-    for (const disambiguator in props.addDiskSpaceUsageAlarm) {
-      const alarmProps = props.addDiskSpaceUsageAlarm[disambiguator];
-      const createdAlarm = this.usageAlarmFactory.addMaxDiskUsagePercentAlarm(
+    for (const disambiguator in props.addFreeStorageSpaceAlarm) {
+      const alarmProps = props.addFreeStorageSpaceAlarm[disambiguator];
+      const createdAlarm = this.usageAlarmFactory.addMinCountAlarm(
         this.freeStorageSpaceMetric,
         alarmProps,
         disambiguator
