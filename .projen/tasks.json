@@ -226,17 +226,17 @@
       "name": "post-upgrade",
       "description": "Runs after upgrading dependencies"
     },
-    "postinstall": {
-      "name": "postinstall",
+    "pre-compile": {
+      "name": "pre-compile",
+      "description": "Prepare the project for compilation"
+    },
+    "prepare": {
+      "name": "prepare",
       "steps": [
         {
           "exec": "npx projen build"
         }
       ]
-    },
-    "pre-compile": {
-      "name": "pre-compile",
-      "description": "Prepare the project for compilation"
     },
     "release": {
       "name": "release",
